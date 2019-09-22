@@ -1,0 +1,56 @@
+{% extends "home.html" %}
+
+
+
+
+
+
+{%block content%}
+ <h1 align="center"> Calc Page</h1>
+<p align="center">--------------------------------------</p>
+<h1 align="center">  Calc  Employees  </h1>  
+<p align="center">--------------------------------------</p>
+<h1 align="center">  Calc  content  </h1>  
+<div class="container">
+<div class="row">
+ <div class="col-md-4">
+   <p>  Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows.
+The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.
+Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three .col-xs-4.
+If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any .col-md-* class to an element will not only affect its styling on medium devices but also on large devices if a .col-lg-* class is not present.</p></div>
+   <div class="col-md-4">
+   <p>equal columns would use three .col-xs-4. If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line. Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any .col-md-* class to an element will not only affect its </p>
+        <table class="table table-bordered" >
+    <tr class="active">
+        <th> Name </th>
+        <th>Address</th>
+        <th>Age</th>
+        
+
+    </tr>
+    {% for post in posts    %}
+    <tr>
+        <td> {{post.name}} </td>
+        <td>{{post.address}} </td>
+          <td >{{post.age}} </td>
+        
+
+    </tr>
+    {%endfor%}
+
+</table>
+<p>equal columns would use three .col-xs-4. If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line. Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any .col-md-* class to an element will not only affect its </p>
+<h2 align="center"  ><a href="/form_company"> Go To Entry Data</a></h2>
+</div>
+<div class="col-md-4">
+   <p>  Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on .rows.
+The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.
+Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three .col-xs-4.
+If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any .col-md-* class to an element will not only affect its styling on medium devices but also on large devices if a .col-lg-* class is not present.</p></div>
+</div>
+</div>
+      <!-------------end content------------> 
+ 
+{%endblock%}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 align="center"> Update Data Here</h1>
+<form method="post" action="{% url 'backend2' id %}">
+    {% csrf_token %}
+    <table border="2px" bgcolor="yellow" style="text-color:white;  "   >
+
+   <tr >
+       <td >
+       fullname:
+       <td><input type="text" name="fullname"></td>
+   </td></tr>
+  <tr>
+      <td>
+
+                email: <td>
+      <input type="email"name="email"></td>
+
+      </td>
+  </tr>
+  <tr>
+      <td>
+          age:
+      <td><input type="number" name ="age"></td>
+
+      </td>
+
+  </tr>
+   <tr>
+       <td>
+                  Birthdate:
+       <td><input type="date" name ="date"></td>
+
+
+       </td>
+   </tr>
+        <tr>
+            <td>
+                <input type="submit" value="update data">
+
+            </td>
+
+
+        </tr>
+
+
+
+</table>
+</form>
+<h2><a href="/showData"> go to dat show</a></h2>
+</body>
+</html>

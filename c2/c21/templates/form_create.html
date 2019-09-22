@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Data Entry</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% include "c21/nav.html" %}
+
+<h1 align="center">سجل هنا</h1>
+<form method="post" action="{% url 'backend1' %}">
+    {% csrf_token %}
+    <table border="2px" align="center"   >
+
+   <tr>
+       <td>
+       fullname:
+       <td><input type="text" name="fullname"></td>
+   </td></tr>
+  <tr>
+      <td>
+
+                email: <td>
+      <input type="email"name="email"></td>
+
+      </td>
+  </tr>
+  <tr>
+      <td>
+          age:
+      <td><input type="number" name ="age"></td>
+
+      </td>
+
+  </tr>
+   <tr>
+       <td>
+                  Birthdate:
+       <td><input type="date" name ="date"></td>
+
+
+       </td>
+   </tr>
+        <tr>
+        <td></td>
+            <td>
+                <input type="submit" value="send data">
+
+            </td>
+
+
+        </tr>
+
+
+
+</table>
+</form>
+<h2 align="center"><a href="/showData"> Go To  Data Show</a></h2>
+
+</body>
+</html>
